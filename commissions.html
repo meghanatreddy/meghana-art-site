@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Commissions — Your Name</title>
+<meta name="description" content="Commission an original piece — pricing, process, and intake form.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Work+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="wordmark"><span data-artist-name>Your Name</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="commissions.html" aria-current="page">Commissions</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="wrap">
+    <span class="eyebrow">Custom, Original Work</span>
+    <h1>Commissions</h1>
+    <p>I take on a small number of commissions each season so every piece gets real attention. Have a look at the options below, then send over your idea.</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Pricing</span>
+      <h2>Starting rates</h2>
+      <svg class="brush" viewBox="0 0 220 18" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M2 9C20 2 40 14 60 8C80 2 100 15 120 8C140 2 165 14 185 7C200 3 210 9 218 6L218 14C210 17 200 12 185 15C165 17 140 9 120 15C100 20 80 8 60 15C40 21 20 10 2 16Z"/>
+      </svg>
+      <p>Final pricing depends on size, complexity, and reference material — the form below gets you an accurate quote.</p>
+    </div>
+    <div class="tier-grid">
+      <div class="tier-card">
+        <span class="tag">Small</span>
+        <h3>Study</h3>
+        <div class="cost">$85 <span>starting</span></div>
+        <ul>
+          <li>Up to 8 × 10 in</li>
+          <li>Ink, graphite, or watercolor</li>
+          <li>1 revision round</li>
+          <li>2 week turnaround</li>
+        </ul>
+      </div>
+      <div class="tier-card featured">
+        <span class="tag">Most requested</span>
+        <h3>Portrait</h3>
+        <div class="cost">$350 <span>starting</span></div>
+        <ul>
+          <li>Up to 16 × 20 in</li>
+          <li>Oil, gouache, or acrylic</li>
+          <li>2 revision rounds</li>
+          <li>3–4 week turnaround</li>
+        </ul>
+      </div>
+      <div class="tier-card">
+        <span class="tag">Large</span>
+        <h3>Full Painting</h3>
+        <div class="cost">$700 <span>starting</span></div>
+        <ul>
+          <li>Up to 24 × 30 in</li>
+          <li>Oil on canvas or panel</li>
+          <li>3 revision rounds</li>
+          <li>4–6 week turnaround</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">How It Works</span>
+      <h2>The process</h2>
+    </div>
+    <div class="process-list">
+      <div class="process-step">
+        <span class="num">01</span>
+        <h4>Send your idea</h4>
+        <p>Fill out the form below with your project, budget, and timeline.</p>
+      </div>
+      <div class="process-step">
+        <span class="num">02</span>
+        <h4>Get a quote</h4>
+        <p>I'll reply within a few days with pricing, timeline, and any questions.</p>
+      </div>
+      <div class="process-step">
+        <span class="num">03</span>
+        <h4>Sketch &amp; approve</h4>
+        <p>Once deposit is received, I share an initial sketch for your feedback.</p>
+      </div>
+      <div class="process-step">
+        <span class="num">04</span>
+        <h4>Paint &amp; deliver</h4>
+        <p>I complete the piece and ship it, or arrange local pickup.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Start Here</span>
+      <h2>Tell me about your project</h2>
+      <p>I'll follow up by email — usually within 2–3 days. If you have reference photos, just mention that below and I'll send you a place to share them.</p>
+    </div>
+
+    <form class="form-card" data-commission-form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <input type="hidden" name="_subject" value="New commission request">
+
+      <div class="field-row">
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="Name" required>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="Email" required>
+        </div>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="type">Project type</label>
+          <select id="type" name="Project type" required>
+            <option value="">Select one</option>
+            <option>Portrait</option>
+            <option>Pet portrait</option>
+            <option>Landscape / place</option>
+            <option>Illustration</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="budget">Budget range</label>
+          <select id="budget" name="Budget range" required>
+            <option value="">Select one</option>
+            <option>$85–$250</option>
+            <option>$250–$500</option>
+            <option>$500–$800</option>
+            <option>$800+</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="size">Preferred size (if known)</label>
+        <input type="text" id="size" name="Preferred size" placeholder="e.g. 16 × 20 in, or unsure">
+      </div>
+
+      <div class="field">
+        <label for="deadline">Do you need it by a certain date?</label>
+        <input type="text" id="deadline" name="Deadline" placeholder="e.g. Before Dec 10, or flexible">
+      </div>
+
+      <div class="field">
+        <label for="details">Tell me about the piece</label>
+        <textarea id="details" name="Project details" required placeholder="Who or what is it of, any reference photos you have, style notes, etc."></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-gold">Send request</button>
+      <p class="form-status" role="status"></p>
+      <p class="form-note">This form sends straight to my inbox — no account or sign-up needed on your end.</p>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>&copy; <span data-year></span> <span data-artist-name>Your Name</span>. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="gallery.html">Gallery</a>
+      <a href="shop.html">Shop</a>
+      <a href="commissions.html">Commissions</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/artworks.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

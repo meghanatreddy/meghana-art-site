@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Name — Painter</title>
+<meta name="description" content="Original paintings and drawings, available for purchase and commission.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Work+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="wordmark"><span data-artist-name>Your Name</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="commissions.html">Commissions</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-inner">
+    <span class="eyebrow">Painter — Working in Oil, Gouache &amp; Ink</span>
+    <h1>Quiet studies of <em>light</em>, place, and the ordinary hour.</h1>
+    <p>Original paintings and drawings made from direct observation, plus a small number of commissions taken on each season.</p>
+    <div class="hero-actions">
+      <a href="gallery.html" class="btn btn-primary">View the gallery</a>
+      <a href="commissions.html" class="btn btn-ghost">Commission a piece</a>
+    </div>
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Recent Work</span>
+      <h2>From the studio</h2>
+      <svg class="brush" viewBox="0 0 220 18" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M2 9C20 2 40 14 60 8C80 2 100 15 120 8C140 2 165 14 185 7C200 3 210 9 218 6L218 14C210 17 200 12 185 15C165 17 140 9 120 15C100 20 80 8 60 15C40 21 20 10 2 16Z"/>
+      </svg>
+      <p>A few recent pieces — the full body of work lives in the gallery.</p>
+    </div>
+    <div class="art-grid" data-preview-grid></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Explore</span>
+      <h2>Three ways to look, buy, or start something new</h2>
+    </div>
+    <div class="art-grid" style="grid-template-columns: repeat(3, 1fr);">
+      <a href="gallery.html" class="tier-card" style="display:block;">
+        <span class="tag">Browse</span>
+        <h3>Gallery</h3>
+        <p style="margin-top:12px; color:var(--ink-soft); font-size:14px;">The full collection, organized by medium — paintings, drawings, and portraits.</p>
+      </a>
+      <a href="shop.html" class="tier-card" style="display:block;">
+        <span class="tag">Buy</span>
+        <h3>Shop</h3>
+        <p style="margin-top:12px; color:var(--ink-soft); font-size:14px;">Original, one-of-a-kind pieces currently available to purchase directly.</p>
+      </a>
+      <a href="commissions.html" class="tier-card featured" style="display:block;">
+        <span class="tag">Start something new</span>
+        <h3>Commissions</h3>
+        <p style="margin-top:12px; color:var(--ink-soft); font-size:14px;">Pricing, process, and a short form to tell me what you have in mind.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>&copy; <span data-year></span> <span data-artist-name>Your Name</span>. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="gallery.html">Gallery</a>
+      <a href="shop.html">Shop</a>
+      <a href="commissions.html">Commissions</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/artworks.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
