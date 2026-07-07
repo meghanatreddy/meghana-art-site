@@ -8,7 +8,7 @@ that serves static files.
 
 Almost everything lives in **two files**:
 
-- **`js/main.js`** → top of the file, edit the `SITE_CONFIG` block:
+- **`js/main.js?v=1`** → top of the file, edit the `SITE_CONFIG` block:
   ```js
   const SITE_CONFIG = {
     artistName: "Meghana Reddy",
@@ -76,6 +76,6 @@ commissions.html      Commissions — pricing, process, intake form
 contact.html            Contact info
 css/style.css              All styling
 js/artworks.js               Your artwork data — edit this
-js/main.js                     Site behavior + SITE_CONFIG — edit this
+js/main.js?v=1                     Site behavior + SITE_CONFIG — edit this
 images/                           Put your artwork photos here
 ```
