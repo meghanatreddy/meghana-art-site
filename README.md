@@ -11,9 +11,9 @@ Almost everything lives in **two files**:
 - **`js/main.js`** → top of the file, edit the `SITE_CONFIG` block:
   ```js
   const SITE_CONFIG = {
-    artistName: "Your Name",
-    email: "you@example.com",
-    instagram: "https://instagram.com/yourhandle",
+    artistName: "Meghana Reddy",
+    email: "megha.treddy@gmail.com",
+    instagram: "https://instagram.com/thisis_meghanacreates",
     ...
   };
   ```
