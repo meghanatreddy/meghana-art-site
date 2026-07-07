@@ -23,7 +23,7 @@ const ARTWORKS = [
     size: "12 × 16 in",
     year: "2026",
     category: "Painting",
-    image: "images/mango.png",
+    image: "images/mango.PNG",
     placeholderColor: "#C9B79C",
     description: "A study of mangos, tamarind, and light reflecting on glasses.",
     forSale: true,
