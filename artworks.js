@@ -18,17 +18,17 @@
 const ARTWORKS = [
   {
     id: "aw-01",
-    title: "Low Tide, Late August",
+    title: "Summer Mangos",
     medium: "Oil on canvas",
-    size: "24 × 30 in",
+    size: "12 × 16 in",
     year: "2026",
     category: "Painting",
-    image: null,
+    image: "images/mango.png",
     placeholderColor: "#C9B79C",
-    description: "A study of the shoreline at the edge of evening, painted over three sittings as the light changed.",
+    description: "A study of mangos, tamarind, and light reflecting on glasses.",
     forSale: true,
     status: "available",
-    price: "$680"
+    price: "$125"
   },
   {
     id: "aw-02",
