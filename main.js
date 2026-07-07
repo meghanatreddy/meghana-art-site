@@ -2,9 +2,9 @@
    Config — edit these to personalize the site
    ========================================================================== */
 const SITE_CONFIG = {
-  artistName: "Your Name",
-  email: "you@example.com",
-  instagram: "https://instagram.com/yourhandle",
+  artistName: "Meghana Reddy",
+  email: "megha.treddy@gmail.com",
+  instagram: "https://instagram.com/thisis_meghanacreates",
   // Free form-notification service — see README for the 2-minute setup.
   // Replace YOUR_FORM_ID with the ID Formspree gives you.
   formspreeEndpoint: "https://formspree.io/f/YOUR_FORM_ID"
