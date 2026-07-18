@@ -4,10 +4,10 @@
 const SITE_CONFIG = {
   artistName: "Meghana Reddy",
   email: "megha.treddy@gmail.com",
-  instagram: "https://instagram.com/thisis_meghanacreates",
+  instagram: "https://instagram.com/thisis_meghanacreates"
   // Free form-notification service — see README for the 2-minute setup.
   // Replace YOUR_FORM_ID with the ID Formspree gives you.
-  formspreeEndpoint: "https://formspree.io/f/YOUR_FORM_ID"
+  
 };
 
 /* ==========================================================================
@@ -225,44 +225,41 @@ function initCommissionForm() {
   if (!form) return;
 
   const status = form.querySelector(".form-status");
-  const submitBtn = form.querySelector('button[type="submit"]');
-  const endpoint = form.getAttribute("action") || SITE_CONFIG.formspreeEndpoint;
 
-  form.addEventListener("submit", async (e) => {
+  form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    if (endpoint.includes("YOUR_FORM_ID")) {
-      status.textContent =
-        "Form isn't connected yet — see the README for the 2-minute Formspree setup. Meanwhile, feel free to email your request directly.";
-      status.className = "form-status show err";
-      return;
-    }
+    const data = new FormData(form);
+    const name = (data.get("Name") || "").toString().trim();
+    const email = (data.get("Email") || "").toString().trim();
+    const type = (data.get("Project type") || "").toString();
+    const budget = (data.get("Budget range") || "").toString();
+    const size = (data.get("Preferred size") || "").toString().trim();
+    const deadline = (data.get("Deadline") || "").toString().trim();
+    const details = (data.get("Project details") || "").toString().trim();
 
-    submitBtn.disabled = true;
-    submitBtn.textContent = "Sending…";
+    const subject = `Commission request from ${name || "your site"}`;
+    const bodyLines = [
+      `Name: ${name}`,
+      `Email: ${email}`,
+      `Project type: ${type}`,
+      `Budget range: ${budget}`,
+      `Preferred size: ${size || "Not specified"}`,
+      `Deadline: ${deadline || "Flexible"}`,
+      "",
+      "Project details:",
+      details,
+      "",
+      "(Reference photos: please attach them to this email before sending.)"
+    ];
+    const body = bodyLines.join("\n");
 
-    try {
-      const res = await fetch(endpoint, {
-        method: "POST",
-        headers: { Accept: "application/json" },
-        body: new FormData(form)
-      });
+    const mailtoLink = `mailto:${SITE_CONFIG.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-      if (res.ok) {
-        status.textContent = "Thanks — your request has been sent. I'll be in touch soon.";
-        status.className = "form-status show ok";
-        form.reset();
-      } else {
-        status.textContent = "Something went wrong sending that. Please try again or email directly.";
-        status.className = "form-status show err";
-      }
-    } catch {
-      status.textContent = "Something went wrong sending that. Please try again or email directly.";
-      status.className = "form-status show err";
-    } finally {
-      submitBtn.disabled = false;
-      submitBtn.textContent = "Send request";
-    }
+    status.textContent = "Opening your email app with everything filled in — attach any reference photos there, then hit send.";
+    status.className = "form-status show ok";
+
+    window.location.href = mailtoLink;
   });
 }
 
